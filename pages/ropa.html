@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pal Carrito | Ropa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header-index">
+        <nav > 
+        <div class="container-nav container">
+            <div class="bloque-1">
+                <a href="../index.html"><img src="../assets/img/logo2-sin-fondo.png" alt="Logo"></a>
+            </div>
+            <div class="bloques-2y3">
+                <div class="bloque-2"> 
+                    <div class="search">
+                        <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
+                        <input id="query" class="input" type="search" placeholder="BUSCAR PRODUCTOS Y MÁS..." name="searchbar"
+                        />
+                    </div>
+                    <div class="btns-principales">
+                        <ul>
+                            <li><a href="../pages/registrate.html" class="activo">REGISTRATE</a></li>
+                            <li><a href="">INGRESAR</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bloque-3">
+                    <ul>
+                        <li><a href="#">ROPA</a></li>
+                        <li><a href="../pages/gorras.html">GORRAS</a></li>
+                        <li><a href="../pages/bazar.html">BAZAR</a></li>
+                        <li><a href="../pages/juguetes.html">JUGUETES</a></li>
+                    </ul>
+                    
+                    <div class="envio-carrito">
+                        <div class="localizacion">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <p>Enviar a</p>
+                                <button id="cp">Seleccionar CP</button>
+                            </div>
+                        </div>
+                        <div class="carrito-compras">
+                            <button>
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span id="carritoContador">0</span> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-cards">
+        <h1>Los más destacados</h1>
+        <section class="container-cards"> 
+            <div class="div-cards">
+                <article>
+                    <div  class="div-card">
+                        <img src="../assets/img/pantalon-ropa.png" alt="Producto 1" />
+                        <div class="div-contenido">
+                            <h2>Pantalón DUTTI</h2>
+                            <p class="price">$50.000</p>
+                            <div class="colores">
+                                <span class="color" style="background-color: #e40c0c;"></span>
+                                <span class="color" style="background-color: #F5F5DC"></span>
+                                <span class="color" style="background-color: #000000;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                </article>
+            
+                <article>
+                    <div class="div-card">
+                        <img src="../assets/img/shot-deflecado-tequila-ropa.png" alt="Producto 2" />
+                        <div class="div-contenido">
+                            <h2>Short TEQUILA deflecado con hotfix off white</h2>
+                            <p class="price">$40.000</p>
+                            <div class="colores">
+                                <span class="color" style="background-color: #000000;"></span>
+                                <span class="color" style="background-color: #F5F5DC"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                </article>
+
+                <article>
+                    <div class="div-card">
+                        <img src="../assets/img/remera-welove-metalizada-ropa.png" alt="Producto 3" />
+                        <div class="div-contenido">
+                            <h2>Remera WELOVE METALIZADO</h2>
+                            <p class="price">$15.000</p>
+                            <div class="colores">
+                                <span class="color" style="background-color: #333333;"></span>
+                                <span class="color" style="background-color: #217fd6;"></span>
+                                <span class="color" style="background-color: #cc759e;"></span>
+                                <span class="color" style="background-color: #F5F5DC;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                </article>
+
+                <article>
+                    <div class="div-card">
+                        <img src="../assets/img/remeras-miradas-ropa.png" alt="Producto 4" />
+                        <div class="div-contenido">
+                            <h2>Remera MIRADAS</h2>
+                            <p class="price">$15.000</p>
+                            <div class="colores">
+                                <span class="color" style="background-color: #e40d0d;"></span>
+                                <span class="color" style="background-color: #070707;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="../js/app.js"></script>
+</body>
+</html>

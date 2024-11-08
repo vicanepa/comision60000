@@ -1,0 +1,197 @@
+.main-index {
+    .section-titulo {
+        @include flex(column, none, center, center, 2rem);
+        font-size: 1.5rem;
+        color: white;
+        padding: 8rem;
+        background-image: linear-gradient(to bottom, #f4acff, #e7b4ff, #dcbcff, #d3c2ff, #ccc8ff, #cfcefd, #d3d4fb, #d7daf9, #e2e3fa, #edecfc, #f6f5fd, #ffffff);
+    }
+
+    .container-cards {
+        display: flex;
+        max-width: 80%;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        justify-content: space-around;
+        text-align: center;
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+    }
+
+    .div-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+
+        .article-cards {
+            width: 500px;
+            height: 500px;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.502), #00000080), url(../assets/img/ropa-img.png);
+            background-size: cover;
+            background-position: center;
+
+            &.img-2 {
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.502), #00000080), url(../assets/img/gorras-img.jpg) ;
+            }
+
+            .div-texto {
+                color: white;
+                font-size: 3rem;
+                text-align: center;
+                width: 50%;
+            }
+
+            a{
+                button{
+                    color: white;
+                    font-size: 1rem;
+                    background-color: rgba(36, 34, 34, 0.5);
+                    border: none;
+                    border-radius: 5rem;
+                    padding: 10px 30px;
+                }
+            }
+
+
+        }
+    }
+
+    .section-info {
+        padding: 5rem;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        .div-info {
+            display: flex;
+            flex-direction: row;
+            gap: .5rem;
+
+            p {
+                color: white;
+            }
+
+            i {
+                color: white;
+            }
+        }
+
+    }
+}
+
+.main-cards {
+    padding: 20px;
+
+    h1{
+        text-align: center;
+        color: #555050;
+        margin-top: 2rem;
+    }
+    .container-cards{
+        max-width: 90%;
+        margin: auto;
+        width: 90%;
+        height: 100%;
+        object-fit:contain;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 8rem;
+
+        .div-cards{
+            
+            @include grid(repeat(3,1fr),center,center,6rem);
+
+        .div-card{
+            width: 300px; /* Ancho fijo para todas las tarjetas */
+            height: 600px; /* Alto fijo para todas las tarjetas */
+            border: 1px solid #ebdfdf;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+
+            &:hover, &.active {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+
+            img{
+                width: 100%;
+                height: 300px; /* Altura fija para la imagen */
+                object-fit: cover; 
+            }
+
+            .div-contenido{
+                padding: 1px;
+                flex-grow: 1; 
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            
+            }
+        }
+        article{
+            display: grid;
+            gap: 1rem;
+            text-align: left;
+
+            h2{
+                color: #201f1f;
+                font-size: 1.2rem;
+                margin-top: 1rem;
+            }
+
+            p{
+                color: #555050;
+            }
+
+            .price {
+                font-weight: bold;
+                font-size: 18px;
+                color:#201f1f;
+            }
+
+            .colores{
+                display: flex;
+                justify-content: center;
+
+                .color {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    margin: 0 5px;
+                    cursor: pointer;
+                    }
+            }
+            .agregarAlCarrito{
+                background-color: rgb(241, 202, 3);
+                border: none;
+                border-radius: 5rem;
+                color: #555050;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+}
