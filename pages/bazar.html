@@ -1,117 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pal Carrito | Bazar</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="../css/style.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
+
 <body>
     <header class="header-index">
-        <nav > 
-        <div class="container-nav container">
-            <div class="bloque-1">
-                <a href="../index.html"><img src="../assets/img/logo2-sin-fondo.png" alt="Logo"></a>
-            </div>
-            <div class="bloques-2y3">
-                <div class="bloque-2"> 
-                    <div class="search">
-                        <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
-                        <input id="query" class="input" type="search" placeholder="BUSCAR PRODUCTOS Y MÁS..." name="searchbar"
-                        />
-                    </div>
-                    <div class="btns-principales">
-                        <ul>
-                            <li><a href="../pages/registrate.html" class="activo">REGISTRATE</a></li>
-                            <li><a href="">INGRESAR</a></li>
-                        </ul>
-                    </div>
+        <nav>
+            <div class="container-nav container">
+                <div class="bloque-1">
+                    <a href="../index.html"><img src="../assets/img/logo2-sin-fondo.png" alt="Logo"></a>
                 </div>
-                <div class="bloque-3">
-                    <ul>
-                        <li><a href="../pages/ropa.html">ROPA</a></li>
-                        <li><a href="../pages/gorras.html">GORRAS</a></li>
-                        <li><a href="#">BAZAR</a></li>
-                        <li><a href="../pages/juguetes.html">JUGUETES</a></li>
-                    </ul>
+                <div class="bloques-2y3">
+                    <div class="bloque-2">
+                        <div class="search">
+                            <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
+                            <input id="query" class="input" type="search" placeholder="BUSCAR PRODUCTOS Y MÁS..."
+                                name="searchbar" />
+                        </div>
+                        <div class="btns-principales">
+                            <ul>
+                                <li><a href="../pages/registrate.html" class="activo">REGISTRATE</a></li>
+                                <li><a href=".">INGRESAR</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bloque-3">
+                        <ul>
+                            <li><a href="../pages/ropa.html">ROPA</a></li>
+                            <li><a href="../pages/gorras.html">GORRAS</a></li>
+                            <li><a href="#">BAZAR</a></li>
+                            <li><a href="../pages/juguetes.html">JUGUETES</a></li>
+                        </ul>
+
+                        <div class="envio-carrito">
+                            <div class="localizacion">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <p>Enviar a</p>
+                                    <button id="cp">Seleccionar CP</button>
+                                </div>
+                            </div>
+
+                            <div class="carrito-compras">
+                                <button>
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                    <div class="contador-productos">
+                                        <span id="carritoContador">0</span>
+                                    </div>
+                                </button>
+                            </div>
+
+                            <div class="ventana-carrito carrito-oculto">
+                                <div class="producto-en-carrito oculto">
+                                    <div class="producto">
+                                        <div class="info-producto">
+                                            <span class="cantidad-producto-carrito">0</span>
+                                            <p class="titulo-producto-carrito"></p>
+                                            <span class="precio-producto-carrito"></span>
+                                        </div>
+
+                                        <i class="fa-solid fa-x icono-cerrado"></i>
                     
-                    <div class="envio-carrito">
-                        <div class="localizacion">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div>
-                                <p>Enviar a</p>
-                                <button id="cp">Seleccionar CP</button>
+                                    </div>
+                                </div>
+
+                                <div class="total-carrito oculto">
+                                    <h3>Total:</h3>
+                                    <span class="total-pagar">$0</span>
+                                </div>
+                                <p class="carro-vacio">El carrito está vacío</p>
                             </div>
                         </div>
-                        <div class="carrito-compras">
-                            <button>
-                                <i class="fa-solid fa-cart-plus"></i>
-                                <span id="carritoContador">0</span> 
-                            </button>
-                        </div>
                     </div>
-                </div>
-            </div>
-            </nav>
+        </nav>
         </div>
     </header>
 
     <main class="main-cards">
         <h1>Los más destacados</h1>
-        <section class="container-cards"> 
+        <section class="container-cards">
             <div class="div-cards">
                 <article>
-                    <div  class="div-card">
-                        <img src="../assets/img/mug-season-grey-bazar.png" alt="Producto 1" />
+                    <div class="div-card">
+                        <figure>
+                            <img src="../assets/img/mug-season-grey-bazar.png" alt="Producto 1" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Mug Seasons Grey</h2>
-                            <p>Importada desde Turquía, nuestra taza Seasons es elegante por su esmaltado auténtico hecho a mano. Esta resistente colección de porcelana es apta para lavavajillas y microondas.</p>
+                            <p>Importada desde Turquía, nuestra taza Seasons es elegante por su esmaltado auténtico
+                                hecho a mano. Esta resistente colección de porcelana es apta para lavavajillas y
+                                microondas.</p>
                             <p class="price">$25.000</p>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
-            
+
                 <article>
-                    <div  class="div-card">
-                        <img src="../assets/img/plato-playo-24cm-bazar.png" alt="Producto 2" />
+                    <div class="div-card">
+                        <figure>
+                            <img src="../assets/img/plato-playo-24cm-bazar.png" alt="Producto 2" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Plato Playo Seasons 24cm</h2>
-                            <p>Importado desde Turquía, nuestro Plato Playp Seasons es elegante por su esmaltado auténtico hecho a mano. Esta resistente colección de porcelana es apta para lavavajillas y microondas.</p>
+                            <p>Importado desde Turquía, nuestro Plato Playp Seasons es elegante por su esmaltado
+                                auténtico hecho a mano. Esta resistente colección de porcelana es apta para lavavajillas
+                                y microondas.</p>
                             <p class="price">$40.000</p>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
-                    <div  class="div-card">
-                        <img src="../assets/img/set-cubiertos-ensalada-belenius-bazar.png" alt="Producto 3" />
+                    <div class="div-card">
+                        <figure>
+                            <img src="../assets/img/set-cubiertos-ensalada-belenius-bazar.png" alt="Producto 3" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Set De Cubiertos De Ensalada Belenius</h2>
-                            <p>Fabricado en acero inoxidable y mangos en mármol blanco. Nuestro set incluye un juego completo de 2 cubiertos de ensalada en caja decorativa. No apto para lavavajillas.</p>
+                            <p>Fabricado en acero inoxidable y mangos en mármol blanco. Nuestro set incluye un juego
+                                completo de 2 cubiertos de ensalada en caja decorativa. No apto para lavavajillas.</p>
                             <p class="price">$60.000</p>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
-                    <div  class="div-card">
-                        <img src="../assets/img/copa-vino-marsala-bazar.png" alt="Producto 4" />
+                    <div class="div-card">
+                        <figure>
+                            <img src="../assets/img/copa-vino-marsala-bazar.png" alt="Producto 4" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Copa De Vino Marsala</h2>
-                            <p>Elaborada con vidrio de primera calidad y teñida de un tono rosa, esta copa combina belleza, delicadeza y funcionalidad a la perfección.</p>
+                            <p>Elaborada con vidrio de primera calidad y teñida de un tono rosa, esta copa combina
+                                belleza, delicadeza y funcionalidad a la perfección.</p>
                             <p class="price">$25.000</p>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
             </div>
         </section>
     </main>
-    
+
     <script src="../js/app.js"></script>
+
 </body>
+
 </html>

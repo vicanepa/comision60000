@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pal Carrito | Juguetes</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="../css/style.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 
 <body>
@@ -51,143 +57,195 @@
                             <div class="carrito-compras">
                                 <button>
                                     <i class="fa-solid fa-cart-plus"></i>
-                                    <span id="carritoContador">0</span> 
+                                    <div class="contador-productos">
+                                        <span id="carritoContador">0</span>
+                                    </div>
                                 </button>
+                            </div>
+
+                            <div class="ventana-carrito carrito-oculto">
+                                <div class="producto-en-carrito oculto">
+                                    <div class="producto">
+                                        <div class="info-producto">
+                                            <span class="cantidad-producto-carrito">0</span>
+                                            <p class="titulo-producto-carrito"></p>
+                                            <span class="precio-producto-carrito"></span>
+                                        </div>
+
+                                        <i class="fa-solid fa-x icono-cerrado"></i>
+
+                                    </div>
+                                </div>
+
+                                <div class="total-carrito oculto">
+                                    <h3>Total:</h3>
+                                    <span class="total-pagar">$0</span>
+                                </div>
+                                <p class="carro-vacio">El carrito está vacío</p>
                             </div>
                         </div>
                     </div>
-                </div>
         </nav>
         </div>
     </header>
 
     <main class="main-cards">
         <h1>Los más destacados</h1>
-        <section class="container-cards"> 
+        <section class="container-cards">
             <div class="div-cards">
                 <article>
-                    <div  class="div-card">
-                        <img src="../assets/img/arrastre-peero-musical-juguete.png" alt="Producto 1" />
+                    <div class="div-card">
+                        <figure>
+                            <img src="../assets/img/arrastre-peero-musical-juguete.png" alt="Producto 1" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Arrastre Con Palo Mi Perrito Musical A Pila El Duende Azul</h2>
-                            <p class="card-descripcion">Tiene botones interactivos que al pulsarlos hacen sonidos de los animales y se enciende una luz
-                                en el lomo del perrito , ideal para el reconocimiento y la estimulación auditiva y visual del
-                                bebé! ¡Además, tiene un barral que se ajusta al perrito para que los nenes que están empezando a
+                            <p class="card-descripcion">Tiene botones interactivos que al pulsarlos hacen sonidos de los
+                                animales y se enciende una luz
+                                en el lomo del perrito , ideal para el reconocimiento y la estimulación auditiva y
+                                visual del
+                                bebé! ¡Además, tiene un barral que se ajusta al perrito para que los nenes que están
+                                empezando a
                                 caminar salgan a pasear con el! Funciona a pila!</p>
                             <p class="price">$25.000</p>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
                     <div class="div-card">
-                        <img src="../assets/img/cactus-bailarin-juguete.png" alt="Producto 2" />
+                        <figure>
+                            <img src="../assets/img/cactus-bailarin-juguete.png" alt="Producto 2" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Juguete De Cactus Baila Canta Y Repite La Voz 30 Cm</h2>
-                            <p class="card-descripcion">¡El juguete de cactus puede bailar, cantar, mover y girar! Puede reproducir diferentes canciones
+                            <p class="card-descripcion">¡El juguete de cactus puede bailar, cantar, mover y girar! Puede
+                                reproducir diferentes canciones
                                 , también cuenta con iluminación, baile y repetir la voz de los mas pequeños.</p>
                             <p class="price">$40.000</p>
                         </div>
-                    </div>  
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    </div>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
                     <div class="div-card">
-                        <img src="../assets/img/juego-de-mesa-ballea-juguetes.png" alt="Producto 3" />
+                        <figure>
+                            <img src="../assets/img/juego-de-mesa-ballea-juguetes.png" alt="Producto 3" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Juego De Mesa Macarena La Ballena</h2>
-                            <p class="card-descripcion">Macarena la Ballena es un juego divertido donde los jugadores se turnan para inflar el globo con
+                            <p class="card-descripcion">Macarena la Ballena es un juego divertido donde los jugadores se
+                                turnan para inflar el globo con
                                 cuidado de no hacerlo volar por el aire!!
-        
-                                Empuja la cola de la ballena tantas veces como el dado lo indique. Cuando el globo alcance su
+
+                                Empuja la cola de la ballena tantas veces como el dado lo indique. Cuando el globo
+                                alcance su
                                 máximo volumen, volara lejos haciendo un gran ruido.!!
                                 ¡No vas a parar de reír con este juego!</p>
                             <p class="price">$20.000</p>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
                     <div class="div-card">
-                        <img src="../assets/img/juego-de-mesa-pinguino-juguetes.png" alt="Producto 4" />
+                        <figure>
+                            <img src="../assets/img/juego-de-mesa-pinguino-juguetes.png" alt="Producto 4" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Juego De Mesa Salvando Al Pingüino </h2>
-                            <p class="card-descripcion">¡Salvando al Pingüino, ten cuidado y no dejes que se caiga el pingüino!
-        
-                                ¡Diviértete con este desafío! Ten cuidado, no rompas el hielo equivocado y evita que el pingüino
+                            <p class="card-descripcion">¡Salvando al Pingüino, ten cuidado y no dejes que se caiga el
+                                pingüino!
+
+                                ¡Diviértete con este desafío! Ten cuidado, no rompas el hielo equivocado y evita que el
+                                pingüino
                                 caiga. <br>
-        
+
                                 Contiene: <br>
                                 1 base, 4 soportes, 38 bloques, 2 martillos, 1 ruleta y 1 pingüino
                             </p>
                             <p class="price">$15.000</p>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
                     <div class="div-card">
-                        <img src="../assets/img/juego-de-mesa-metegol-juguetes.png" alt="Producto 5" />
+                        <figure>
+                            <img src="../assets/img/juego-de-mesa-metegol-juguetes.png" alt="Producto 5" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Juego De Mesa Metegol Mini Futbol 50cm</h2>
-                            <p class="card-descripcion">El set incluye una mesa de fútbol con dos equipos de jugadores, cada equipo con 18 jugadores,
-                                dispuestos en barras que los jugadores pueden girar y mover para simular un partido de fútbol.
-                                Además, el metegol viene con dos pelotas, dos arcos y marcadores de puntuación en cada lado. Es
+                            <p class="card-descripcion">El set incluye una mesa de fútbol con dos equipos de jugadores,
+                                cada equipo con 18 jugadores,
+                                dispuestos en barras que los jugadores pueden girar y mover para simular un partido de
+                                fútbol.
+                                Además, el metegol viene con dos pelotas, dos arcos y marcadores de puntuación en cada
+                                lado. Es
                                 perfecto para dos jugadores y está diseñado para niños de 6 años en adelante.</p>
                             <p class="price">$50.000</p>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
                     <div class="div-card">
-                        <img src="../assets/img/mini-castillo-princesas-juguetes.png" alt="Producto 6" />
+                        <figure>
+                            <img src="../assets/img/mini-castillo-princesas-juguetes.png" alt="Producto 6" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Juego Mini Castillo De Princesa Mas Accesorios</h2>
                             <p class="card-descripcion">¡Abre las puertas de la magia! Con solo
                                 desplegarlo, descubrirás un mundo de fantasía lleno de accesorios para jugar sin
-                                límites. Cada rincón del castillo está diseñado para que la imaginación vuele mientras recreas
+                                límites. Cada rincón del castillo está diseñado para que la imaginación vuele mientras
+                                recreas
                                 las mejores historias de princesa.</p>
                             <p class="price">$10.000</p>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
                     <div class="div-card">
-                        <img src="../assets/img/pelota-tela-jueguetes.png" alt="Producto 7" />
+                        <figure>
+                            <img src="../assets/img/pelota-tela-jueguetes.png" alt="Producto 7" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Pelota Cascabel De Tela</h2>
-                            <p class="card-descripcion">Pelota Cascabel de tela y elementos coloridos y texturizados para estimular las habilidades
+                            <p class="card-descripcion">Pelota Cascabel de tela y elementos coloridos y texturizados
+                                para estimular las habilidades
                                 sensoriales, cognitivas y motrices del bebé durante los primeros meses <br>
                                 Medida: 13cm . Muy suave y liviana</p>
                             <p class="price">$8.000</p>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
                     <div class="div-card">
-                        <img src="../assets/img/peluche-mickey-juguetes.png" alt="Producto 8" />
+                        <figure>
+                            <img src="../assets/img/peluche-mickey-juguetes.png" alt="Producto 8" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Mickey Mouse Peluche 35 Cm Disney</h2>
                             <p class="card-descripcion">Peluche Mickey Mouse 35 Cm Disney</p>
                             <p class="price">$30.000</p>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
             </div>
         </section>
     </main>
     <script src="../js/app.js"></script>
+
 </body>
 
 </html>

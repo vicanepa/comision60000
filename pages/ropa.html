@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pal Carrito | Ropa</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="../css/style.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
     <header class="header-index">
@@ -47,12 +53,34 @@
                         <div class="carrito-compras">
                             <button>
                                 <i class="fa-solid fa-cart-plus"></i>
-                                <span id="carritoContador">0</span> 
+                                <div class="contador-productos">
+                                    <span id="carritoContador">0</span>
+                                </div>
                             </button>
+                        </div>
+
+                        <div class="ventana-carrito carrito-oculto">
+                            <div class="producto-en-carrito oculto">
+                                <div class="producto">
+                                    <div class="info-producto">
+                                        <span class="cantidad-producto-carrito">0</span>
+                                        <p class="titulo-producto-carrito"></p>
+                                        <span class="precio-producto-carrito"></span>
+                                    </div>
+
+                                    <i class="fa-solid fa-x icono-cerrado"></i>
+                
+                                </div>
+                            </div>
+
+                            <div class="total-carrito oculto">
+                                <h3>Total:</h3>
+                                <span class="total-pagar">$0</span>
+                            </div>
+                            <p class="carro-vacio">El carrito está vacío</p>
                         </div>
                     </div>
                 </div>
-            </div>
             </nav>
         </div>
     </header>
@@ -63,7 +91,9 @@
             <div class="div-cards">
                 <article>
                     <div  class="div-card">
-                        <img src="../assets/img/pantalon-ropa.png" alt="Producto 1" />
+                        <figure>
+                            <img src="../assets/img/pantalon-ropa.png" alt="Producto 1" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Pantalón DUTTI</h2>
                             <p class="price">$50.000</p>
@@ -74,12 +104,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
             
                 <article>
                     <div class="div-card">
-                        <img src="../assets/img/shot-deflecado-tequila-ropa.png" alt="Producto 2" />
+                        <figure>
+                            <img src="../assets/img/shot-deflecado-tequila-ropa.png" alt="Producto 2" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Short TEQUILA deflecado con hotfix off white</h2>
                             <p class="price">$40.000</p>
@@ -89,12 +121,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
                     <div class="div-card">
-                        <img src="../assets/img/remera-welove-metalizada-ropa.png" alt="Producto 3" />
+                        <figure>
+                            <img src="../assets/img/remera-welove-metalizada-ropa.png" alt="Producto 3" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Remera WELOVE METALIZADO</h2>
                             <p class="price">$15.000</p>
@@ -106,12 +140,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
                     <div class="div-card">
-                        <img src="../assets/img/remeras-miradas-ropa.png" alt="Producto 4" />
+                        <figure>
+                            <img src="../assets/img/remeras-miradas-ropa.png" alt="Producto 4" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Remera MIRADAS</h2>
                             <p class="price">$15.000</p>
@@ -121,11 +157,12 @@
                             </div>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
             </div>
         </section>
     </main>
     <script src="../js/app.js"></script>
+    
 </body>
 </html>

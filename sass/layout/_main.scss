@@ -40,6 +40,15 @@
 
             &.img-2 {
                 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.502), #00000080), url(../assets/img/gorras-img.jpg) ;
+                background-size: cover;
+            }
+            &.img-3 {
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.502), #00000080), url(../assets/img/bazar-img.png) ;
+                background-size: cover;
+            }
+            &.img-4 {
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.502), #00000080), url(../assets/img/juguetes-img.png) ;
+                background-size: cover;
             }
 
             .div-texto {
@@ -114,6 +123,65 @@
             
             @include grid(repeat(3,1fr),center,center,6rem);
 
+            .producto{
+                border-radius: 10px;
+
+                &:hover{
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+                }
+
+                figure{
+                    overflow: hidden;
+
+                    img{
+                        width: 100%;
+                        height: 300px;
+                        object-fit: cover;
+                        border-radius: 10px 10px 0 0;
+                        transition: all .5s;
+
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+
+                .info-producto{
+                    padding: 15px 30px;
+                    line-height: 2;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    h2, h3{
+                        color: #201f1f;
+                        font-size: .5rem;
+                        margin-top: 1rem;
+                    }
+        
+                    p{
+                        color: #555050;
+                        .precio{
+                            font-size: 18px;
+                            font-weight: 900;
+                        }
+                    }
+    
+                    
+    
+                    button{
+                        border: none;
+                        background: none;
+                        background-color: #000;
+                        color: #fff;
+                        padding: 15px 10px;
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+            
+
         .div-card{
             width: 300px; /* Ancho fijo para todas las tarjetas */
             height: 600px; /* Alto fijo para todas las tarjetas */
@@ -129,13 +197,21 @@
             &:hover, &.active {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             }
+            
+            figure{
+                overflow: hidden; 
 
-            img{
-                width: 100%;
-                height: 300px; /* Altura fija para la imagen */
-                object-fit: cover; 
+                img{
+                    width: 100%;
+                    height: 300px; /* Altura fija para la imagen */
+                    object-fit: cover;
+                    
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
             }
-
+        
             .div-contenido{
                 padding: 1px;
                 flex-grow: 1; 
@@ -195,3 +271,7 @@
     }
 }
 }
+
+
+
+

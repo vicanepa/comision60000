@@ -4,6 +4,104 @@
   padding: 0;
   box-sizing: border-box; }
 
+.body-login {
+  filter: blur(0, 0, 0, 1.25rem); }
+
+.main-login {
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px; }
+
+.contenedor-general {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  position: relative; }
+  .contenedor-general .caja-trasera {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 128, 255, 0.5); }
+    .contenedor-general .caja-trasera div {
+      margin: 100px 40px;
+      color: white;
+      transition: all 500ms;
+      font-weight: 400; }
+      .contenedor-general .caja-trasera div p {
+        font-size: 16px;
+        font-weight: 300; }
+      .contenedor-general .caja-trasera div button {
+        padding: 10px 40px;
+        border: 2px solid #fff;
+        font-size: 14px;
+        background: transparent;
+        font-weight: 600;
+        cursor: pointer;
+        color: white;
+        outline: none;
+        transition: all 300ms; }
+        .contenedor-general .caja-trasera div button:hover {
+          background: #fff;
+          color: #46A2FD; }
+      .contenedor-general .caja-trasera div p,
+      .contenedor-general .caja-trasera div button {
+        margin-top: 30px; }
+      .contenedor-general .caja-trasera div.h3 {
+        font-weight: 400;
+        font-size: 26px; }
+
+/*Formularios*/
+.contenedor-ingresar-registrar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+  top: -185px;
+  left: 10px;
+  /*La transicion va despues del codigo JS*/
+  transition: left 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  .contenedor-ingresar-registrar form {
+    width: 100%;
+    padding: 80px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px; }
+    .contenedor-ingresar-registrar form h2 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #46A2FD; }
+    .contenedor-ingresar-registrar form input {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      border: none;
+      background: #F2F2F2;
+      font-size: 16px;
+      outline: none; }
+    .contenedor-ingresar-registrar form button {
+      padding: 10px 40px;
+      margin-top: 40px;
+      border: none;
+      font-size: 14px;
+      background: #46A2FD;
+      font-weight: 600;
+      cursor: pointer;
+      color: white;
+      outline: none; }
+
+.formulario-ingresar {
+  opacity: 1;
+  display: block; }
+
+.formulario-registrar {
+  display: none; }
+
 .header-index {
   background-color: #f1ca03; }
   .header-index .container-nav {
@@ -93,35 +191,91 @@
           gap: 5rem;
           align-items: center;
           margin-inline-end: 3rem; }
-        .header-index .container-nav .bloques-2y3 .bloque-3 .localizacion {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap: 1rem; }
-          .header-index .container-nav .bloques-2y3 .bloque-3 .localizacion i {
+          .header-index .container-nav .bloques-2y3 .bloque-3 .envio-carrito .localizacion {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem; }
+            .header-index .container-nav .bloques-2y3 .bloque-3 .envio-carrito .localizacion i {
+              color: #3f3d3d;
+              font-size: 1.5rem; }
+            .header-index .container-nav .bloques-2y3 .bloque-3 .envio-carrito .localizacion div {
+              display: flex;
+              flex-direction: column; }
+            .header-index .container-nav .bloques-2y3 .bloque-3 .envio-carrito .localizacion button {
+              border: 1px solid;
+              border-radius: 2rem;
+              padding: .2rem; }
+        .header-index .container-nav .bloques-2y3 .bloque-3 .carrito-compras {
+          position: relative; }
+          .header-index .container-nav .bloques-2y3 .bloque-3 .carrito-compras button {
+            background: none;
+            border: none; }
+            .header-index .container-nav .bloques-2y3 .bloque-3 .carrito-compras button .contador-productos {
+              position: absolute;
+              background-color: #585656;
+              color: white;
+              font-size: 12px;
+              font-weight: bold;
+              border-radius: 50%;
+              padding: 3px 6px; }
+              .header-index .container-nav .bloques-2y3 .bloque-3 .carrito-compras button .contador-productos #carritoContador {
+                font-size: 12px; }
+          .header-index .container-nav .bloques-2y3 .bloque-3 .carrito-compras i {
             color: #3f3d3d;
             font-size: 1.5rem; }
-          .header-index .container-nav .bloques-2y3 .bloque-3 .localizacion div {
+        .header-index .container-nav .bloques-2y3 .bloque-3 .ventana-carrito {
+          position: absolute;
+          top: 10rem;
+          right: 1rem;
+          background-color: #fff;
+          width: 400px;
+          z-index: 1;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          border-radius: 10px; }
+          .header-index .container-nav .bloques-2y3 .bloque-3 .ventana-carrito .producto {
             display: flex;
-            flex-direction: column; }
-          .header-index .container-nav .bloques-2y3 .bloque-3 .localizacion button {
-            border: 1px solid;
-            border-radius: 2rem;
-            padding: .2rem; }
-        .header-index .container-nav .bloques-2y3 .bloque-3 .carrito-compras button {
-          background: none;
-          border: none; }
-          .header-index .container-nav .bloques-2y3 .bloque-3 .carrito-compras button #carritoContador {
-            position: absolute;
-            background-color: #585656;
-            color: white;
-            font-size: 12px;
-            font-weight: bold;
-            border-radius: 50%;
-            padding: 3px 6px; }
-        .header-index .container-nav .bloques-2y3 .bloque-3 .carrito-compras i {
-          color: #3f3d3d;
-          font-size: 1.5rem; }
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+            .header-index .container-nav .bloques-2y3 .bloque-3 .ventana-carrito .producto .info-producto {
+              display: flex;
+              justify-content: space-between;
+              flex: 0.8;
+              gap: 1rem; }
+              .header-index .container-nav .bloques-2y3 .bloque-3 .ventana-carrito .producto .info-producto .cantidad-producto-carrito {
+                font-weight: 400;
+                font-size: 20px; }
+              .header-index .container-nav .bloques-2y3 .bloque-3 .ventana-carrito .producto .info-producto .titulo-producto-carrito {
+                font-size: 20px; }
+              .header-index .container-nav .bloques-2y3 .bloque-3 .ventana-carrito .producto .info-producto .precio-producto-carrito {
+                font-weight: 700;
+                font-size: 20px;
+                margin-left: 10px; }
+        .header-index .container-nav .bloques-2y3 .bloque-3 .total-carrito {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px 0;
+          gap: 20px; }
+          .header-index .container-nav .bloques-2y3 .bloque-3 .total-carrito h3 {
+            font-size: 20px;
+            font-weight: 700; }
+          .header-index .container-nav .bloques-2y3 .bloque-3 .total-carrito .total-pagar {
+            font-size: 20px;
+            font-weight: 900; }
+      .header-index .container-nav .bloques-2y3 .icono-cerrado {
+        width: 25px;
+        height: 25px; }
+        .header-index .container-nav .bloques-2y3 .icono-cerrado:hover {
+          stroke: red;
+          cursor: pointer; }
+      .header-index .container-nav .bloques-2y3 .carro-vacio {
+        padding: 20px;
+        text-align: center; }
+      .header-index .container-nav .bloques-2y3 .carrito-oculto {
+        display: none; }
 
 .main-index .section-titulo {
   display: flex;
@@ -164,7 +318,14 @@
     background-size: cover;
     background-position: center; }
     .main-index .div-cards .article-cards.img-2 {
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.502), #00000080), url(../assets/img/gorras-img.jpg); }
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.502), #00000080), url(../assets/img/gorras-img.jpg);
+      background-size: cover; }
+    .main-index .div-cards .article-cards.img-3 {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.502), #00000080), url(../assets/img/bazar-img.png);
+      background-size: cover; }
+    .main-index .div-cards .article-cards.img-4 {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.502), #00000080), url(../assets/img/juguetes-img.png);
+      background-size: cover; }
     .main-index .div-cards .article-cards .div-texto {
       color: white;
       font-size: 3rem;
@@ -217,6 +378,42 @@
       align-items: center;
       justify-content: center;
       gap: 6rem; }
+      .main-cards .container-cards .div-cards .producto {
+        border-radius: 10px; }
+        .main-cards .container-cards .div-cards .producto:hover {
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+        .main-cards .container-cards .div-cards .producto figure {
+          overflow: hidden; }
+          .main-cards .container-cards .div-cards .producto figure img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            transition: all .5s; }
+            .main-cards .container-cards .div-cards .producto figure img:hover {
+              transform: scale(1.2); }
+        .main-cards .container-cards .div-cards .producto .info-producto {
+          padding: 15px 30px;
+          line-height: 2;
+          display: flex;
+          flex-direction: column;
+          gap: 10px; }
+          .main-cards .container-cards .div-cards .producto .info-producto h2, .main-cards .container-cards .div-cards .producto .info-producto h3 {
+            color: #201f1f;
+            font-size: .5rem;
+            margin-top: 1rem; }
+          .main-cards .container-cards .div-cards .producto .info-producto p {
+            color: #555050; }
+            .main-cards .container-cards .div-cards .producto .info-producto p .precio {
+              font-size: 18px;
+              font-weight: 900; }
+          .main-cards .container-cards .div-cards .producto .info-producto button {
+            border: none;
+            background: none;
+            background-color: #000;
+            color: #fff;
+            padding: 15px 10px;
+            cursor: pointer; }
       .main-cards .container-cards .div-cards .div-card {
         width: 300px;
         /* Ancho fijo para todas las tarjetas */
@@ -232,11 +429,15 @@
         padding: 1rem; }
         .main-cards .container-cards .div-cards .div-card:hover, .main-cards .container-cards .div-cards .div-card.active {
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
-        .main-cards .container-cards .div-cards .div-card img {
-          width: 100%;
-          height: 300px;
-          /* Altura fija para la imagen */
-          object-fit: cover; }
+        .main-cards .container-cards .div-cards .div-card figure {
+          overflow: hidden; }
+          .main-cards .container-cards .div-cards .div-card figure img {
+            width: 100%;
+            height: 300px;
+            /* Altura fija para la imagen */
+            object-fit: cover; }
+            .main-cards .container-cards .div-cards .div-card figure img:hover {
+              transform: scale(1.1); }
         .main-cards .container-cards .div-cards .div-card .div-contenido {
           padding: 1px;
           flex-grow: 1;

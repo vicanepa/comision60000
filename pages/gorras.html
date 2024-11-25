@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pal Carrito | Gorras</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="../css/style.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 
 <body>
@@ -51,25 +57,49 @@
                             <div class="carrito-compras">
                                 <button>
                                     <i class="fa-solid fa-cart-plus"></i>
-                                    <span id="carritoContador">0</span> 
+                                    <div class="contador-productos">
+                                        <span id="carritoContador">0</span>
+                                    </div>
                                 </button>
+                            </div>
+
+                            <div class="ventana-carrito carrito-oculto">
+                                <div class="producto-en-carrito oculto">
+                                    <div class="producto">
+                                        <div class="info-producto">
+                                            <span class="cantidad-producto-carrito">0</span>
+                                            <p class="titulo-producto-carrito"></p>
+                                            <span class="precio-producto-carrito"></span>
+                                        </div>
+
+                                        <i class="fa-solid fa-x icono-cerrado"></i>
+
+                                    </div>
+                                </div>
+
+                                <div class="total-carrito oculto">
+                                    <h3>Total:</h3>
+                                    <span class="total-pagar">$0</span>
+                                </div>
+                                <p class="carro-vacio">El carrito está vacío</p>
                             </div>
                         </div>
                     </div>
-                </div>
         </nav>
         </div>
     </header>
 
     <main class="main-cards">
         <h1>Los más destacados</h1>
-        <section class="container-cards"> 
+        <section class="container-cards">
             <div class="div-cards">
                 <article>
-                    <div  class="div-card">
-                        <img src="../assets/img/gorras-1.JPG" alt="Producto 1" />
+                    <div class="div-card">
+                        <figure>
+                            <img src="../assets/img/gorras-1.JPG" alt="Producto 1" />
+                        </figure>
                         <div class="div-contenido">
-                            <h2>Gorra 🤍  bordado</h2>
+                            <h2>Gorra 🤍 bordado</h2>
                             <p>Gorra Curva , ajustable con hebilla reguladora. <br>
                                 Medida: Se extiende desde 55 a 68 cm. <br>
                                 Tela: 100% algodon prelavado. <br>
@@ -83,12 +113,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
-            
+
                 <article>
-                    <div  class="div-card">
-                        <img src="../assets/img/gorras-2.JPG" alt="Producto 2" />
+                    <div class="div-card">
+                        <figure>
+                            <img src="../assets/img/gorras-2.JPG" alt="Producto 2" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Gorra VAIL</h2>
                             <p>Gorra Curva , ajustable con hebilla reguladora. <br>
@@ -103,12 +135,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
-                    <div  class="div-card">
-                        <img src="../assets/img/gorras-3.JPG" alt="Producto 3" />
+                    <div class="div-card">
+                        <figure>
+                            <img src="../assets/img/gorras-3.JPG" alt="Producto 3" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Gorra CAP</h2>
                             <p>Gorra Curva , ajustable con hebilla reguladora. <br>
@@ -124,12 +158,14 @@
                             </div>
                         </div>
                     </div class="div-contenido">
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
-                    <div  class="div-card">
-                        <img src="../assets/img/gorras-4.JPG" alt="Producto 4" />
+                    <div class="div-card">
+                        <figure>
+                            <img src="../assets/img/gorras-4.JPG" alt="Producto 4" />
+                        </figure>
                         <div>
                             <h2>Vintage Lisas Cuadradas</h2>
                             <p>Gorra Cuadrada , ajustable con hebilla reguladora. <br>
@@ -144,12 +180,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
-                    <div  class="div-card">
-                        <img src="../assets/img/gorras-5.JPG" alt="Producto 5" />
+                    <div class="div-card">
+                        <figure>
+                            <img src="../assets/img/gorras-5.JPG" alt="Producto 5" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>🐎 Bordado Blanco</h2>
                             <p>Gorra Curva , ajustable con hebilla reguladora. <br>
@@ -166,12 +204,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
 
                 <article>
-                    <div  class="div-card">
-                        <img src="../assets/img/gorras-6.JPG" alt="Producto 6" />
+                    <div class="div-card">
+                        <figure>
+                            <img src="../assets/img/gorras-6.JPG" alt="Producto 6" />
+                        </figure>
                         <div class="div-contenido">
                             <h2>Vintage Jeans</h2>
                             <p>Gorra Curva , ajustable con hebilla reguladora. <br>
@@ -188,12 +228,13 @@
                             </div>
                         </div>
                     </div>
-                    <button class="agregarAlCarrito">Agregar al carrito</button>
+                    <button id="agregar" class="agregarAlCarrito">Agregar al carrito</button>
                 </article>
             </div>
-        </div>
+            </div>
         </section>
     </main>
+
     <script src="../js/app.js"></script>
 </body>
 
